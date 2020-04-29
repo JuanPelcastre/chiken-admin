@@ -31,24 +31,6 @@
         ganancia = entryProduct * priceCliente;
         document.getElementById("demo").innerHTML = `ganancia ${ganancia}`;
     }
-    // Crear una lista
-var ul = document.createElement('ul');
-document.body.appendChild(ul);
 
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
-ul.appendChild(li1);
-ul.appendChild(li2);
-
-function hide(e){
-  // e.target se refiere cuando se clickea el elemento <li>
-  // Esto es diferente de e.currentTarget que se referiría al padre <ul> en este contexto
-  e.target.style.visibility = 'hidden';
-}
-
-// Incluir el 'listener' a la lista
-// Se ejecutará cuando se haga click en cada <li>
-ul.addEventListener('click', hide, false);
-        
 </script>
 </html>
