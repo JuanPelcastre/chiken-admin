@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sistema de administracion de polleria</h2>
+
+    <p>Por favor introduce los datos para calcular ganancias:</p>
+    
+    <label>Pollo que LLego: <input id="entryProduct"></label>
+    <label>Precio proveedor: <input id="priceProveedor"></label>
+    <label>Precio Cliente: <input id="priceCliente"></label>
+    
+    <button type="button" onclick="myFunction()">Submit</button>
+    
+    <p id="demo"></p>
+        
+<script>
+    function myFunction() {
+        var entryProduct, priceProveedor, priceCliente, text,
+        ganancia;
+
+        entryProduct = document.getElementById("entryProduct").value;
+        priceProveedor = document.getElementById("priceProveedor").value;
+        priceCliente = document.getElementById("priceCliente").value;
+
+        ganancia = entryProduct * priceCliente;
+        document.getElementById("demo").innerHTML = `ganancia ${ganancia}`;
+    }
+    // Crear una lista
+var ul = document.createElement('ul');
+document.body.appendChild(ul);
+
+var li1 = document.createElement('li');
+var li2 = document.createElement('li');
+ul.appendChild(li1);
+ul.appendChild(li2);
+
+function hide(e){
+  // e.target se refiere cuando se clickea el elemento <li>
+  // Esto es diferente de e.currentTarget que se referiría al padre <ul> en este contexto
+  e.target.style.visibility = 'hidden';
+}
+
+// Incluir el 'listener' a la lista
+// Se ejecutará cuando se haga click en cada <li>
+ul.addEventListener('click', hide, false);
+        
+</script>
+</html>
